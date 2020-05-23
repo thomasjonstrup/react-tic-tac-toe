@@ -1,11 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+/* import logo from './logo.svg'; */
 import './App.css';
+import { Game } from './components/Game';
+
+import {calculateWinner} from './helpers';
+
+const squares = [
+	null, null, null,
+	'X', 'X', 'X',
+	null, null, null,
+];
 
 function App() {
+	console.log('calculateWinner(squares) :>> ', calculateWinner(squares));
   return (
     <div className="App">
-      <header className="App-header">
+      <Game />
+{/*       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -18,7 +29,8 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+
     </div>
   );
 }
